@@ -7,13 +7,36 @@ struct Node_t {
     Node *left;
     Node *right;
 
-    void *data;
+    Variable *data;
     void (*freeData)(void*);
-}
+};
 
 struct Tree_t {
     Node *root;
     size_t size;
+};
+
+typedef enum {
+    SCALAR,
+    MATRIX
+} VariableType;
+
+struct Variable_t {
+    bool isKnown;
+    void *value;
+    VariableType type;
+};
+
+bool isKnown(Variable *v) {
+    return v->isKnown;
+}
+
+void *getValue(Variable *v) {
+    return v->value;
+}
+
+VariableType getVarType(Variable *v) {
+    return v->type;
 }
 
 Tree *create() {

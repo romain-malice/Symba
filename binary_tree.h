@@ -3,6 +3,7 @@
 
 typedef struct Node_t Node;
 typedef struct Tree_t Tree;
+typedef struct Variable_t Variable;
 
 /**
  * @brief Creates a binary tree
