@@ -17,8 +17,8 @@ struct Tree_t {
 };
 
 typedef enum {
-    SCALAR,
-    MATRIX
+    REAL,
+    INTEGER
 } VariableType;
 
 struct Variable_t {
