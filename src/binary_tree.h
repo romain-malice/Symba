@@ -24,14 +24,14 @@ void freeNode(Tree *tree, Node *node);
  *
  * Doesn't links to any other node by default.
  */
-Node *createNode(Tree *tree, void *data, void (*freeData)(void*));
+Node *createNode(Tree *tree, void *data, void (*freeData)(void *));
 
 /**
  * @brief Creates the root node of a tree and returns it.
- * 
+ *
  * Returns NULL if there is already a root to the given tree.
  */
-Node *createRoot(Tree *tree, void *data, void (*freeData)(void*));
+Node *createRoot(Tree *tree, void *data, void (*freeData)(void *));
 
 /**
  * @brief Creates a child for a given node.
@@ -40,10 +40,11 @@ Node *createRoot(Tree *tree, void *data, void (*freeData)(void*));
  * @param parent The node that will get a child.
  * @param data A pointer to the data in the node.
  * @param freeData A function that frees this data type.
- * @param isLeftChild A boolean value to know to which side we want to create the child.
+ * @param isLeftChild A boolean value to know to which side we want to create
+ * the child.
  */
-Node *createChild(Tree *tree, Node *parent, void *data, void (*freeData)(void*), bool isLeftChild);
-
+Node *createChild(Tree *tree, Node *parent, void *data,
+                  void (*freeData)(void *), bool isLeftChild);
 
 Node *getParent(Tree *t, Node *n);
 bool isEmpty(Tree *t);
