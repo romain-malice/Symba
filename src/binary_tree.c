@@ -30,7 +30,7 @@ void *getValue(Variable *v) { return v->value; }
 
 VariableType getVarType(Variable *v) { return v->type; }
 
-Tree *create() {
+Tree *createTree() {
   // Allocate space
   Tree *tree = malloc(sizeof(Tree));
   if (!tree)

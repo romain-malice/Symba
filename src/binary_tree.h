@@ -10,7 +10,7 @@ typedef struct Variable_t Variable;
  *
  * The tree is empty after creation.
  */
-Tree *create();
+Tree *createTree();
 
 /**
  * @brief Recursively frees the node and its childs.
